@@ -1,28 +1,53 @@
 import React from "react";
 import { Home } from "./Home";
-import Aurora from "../components/Aurora";
+import Aurora from "../library/Aurora";
 import { SlideTabs } from "../components/SlideTabs";
-import SimpleDock from "../components/DockContainer";
+import { Dock, DockIcon } from "../library/DockContainer";
+import { Github, Linkedin } from "lucide-react";
+import { TbBrandLeetcode } from "react-icons/tb";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Outlet } from "react-router-dom";
+import SplashCursor from "../library/SplashCursor";
 
 export const Layout = () => {
   return (
     <div className="bg-[#060010] min-h-screen relative">
-      <div className="absolute inset-0 z-0 h-full w-full">
+      <SplashCursor />
+      <div className="absolute inset-0 z-10 h-full w-full">
         <Aurora
-          colorStops={["#3A29FF", "#9c2bff", "#3A29FF"]}
+          colorStops={["#0f0c29", "#302b63", "#24243e"]}
           blend={0.5}
           amplitude={1.0}
           speed={0.5}
         />
       </div>
 
-      <div className="relative z-10 flex justify-center pt-4">
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
         <SlideTabs />
       </div>
 
-      <div className="relative z-10">{/* <Home /> or other components */}</div>
+      <main className="">
+        <Outlet />
+      </main>
 
-      
+      <div className="fixed bottom-0 left-0 right-0 z-20 flex justify-center p-4">
+        <Dock
+          iconSize={50}
+          iconMagnification={72}
+          iconDistance={150}
+          direction="middle"
+        >
+          <DockIcon href="https://github.com/aamiraliv">
+            <FaGithub size={20} className="text-white/60" />
+          </DockIcon>
+          <DockIcon href="https://linkedin.com/in/amir-ali-v-9ab1912aa">
+            <FaLinkedin size={20} className="text-white/60" />
+          </DockIcon>
+          <DockIcon href="https://leetcode.com/u/aamirv/">
+            <TbBrandLeetcode size={20} className="text-white/60" />
+          </DockIcon>
+        </Dock>
+      </div>
     </div>
   );
 };
