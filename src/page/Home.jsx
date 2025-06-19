@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <div>
       <div className="h-screen overflow-hidden relative">
-        <div className="absolute inset-0 z-20 flex flex-col gap-8 items-center justify-center">
+        <div className="absolute select-none inset-0 z-20 flex flex-col gap-10 items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-2">
             <div
               className={cn(
@@ -19,7 +19,7 @@ export const Home = () => {
               )}
             >
               <CoolMode>
-                <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out text-sm hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                <AnimatedShinyText className="inline-flex select-none items-center justify-center px-4 py-1 transition ease-out text-sm hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
                   <span>✨ I help brands turn bold ideas !</span>
                   <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                 </AnimatedShinyText>
@@ -35,6 +35,15 @@ export const Home = () => {
             </h1>
             <p className="text-lg font-mono text-neutral-400/50 tracking-wide">
               Full Stack Developer | UI/UX Enthusiast
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-2">
+            <TextShimmer className="font-mono text-[15px]" duration={2}>
+              crafting seamless web experiences.
+            </TextShimmer>
+            <p className="text-sm font-poiret text-neutral-400/50 tracking-wide">
+              Currently building full-stack apps using React, Tailwind, Spring
+              Boot & Microservices ☁️
             </p>
           </div>
         </div>

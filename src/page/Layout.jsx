@@ -11,7 +11,7 @@ import SplashCursor from "../library/SplashCursor";
 
 export const Layout = () => {
   return (
-    <div className="bg-[#060010] min-h-screen relative">
+    <div className="bg-[#060010] min-h-screen select-none relative">
       <SplashCursor />
       <div className="absolute inset-0 z-10 h-full w-full">
         <Aurora
