@@ -1,6 +1,14 @@
+
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Orbitron:wght@400..900&family=Poiret+One&family=Reenie+Beanie&family=Six+Caps&display=swap");
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --font-audiowide: "Audiowide", cursive;
+  --font-bodoni: "BodoniModa", serif;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-poiret: "Poiret One", cursive;
+  --font-reenie: "Reenie Beanie", cursive;
+  --font-sixcaps: "Six Caps", sans-serif;
 }
 
 body {
@@ -14,4 +22,33 @@ body {
 
 html {
   scrollbar-width: none;
+}
+
+@theme inline {
+  --animate-shiny-text: shiny-text 8s infinite;
+  --animate-shine: shine var(--duration) infinite linear;
+
+  @keyframes shiny-text {
+    0%,
+    90%,
+    100% {
+      background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+    30%,
+    60% {
+      background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
 }
