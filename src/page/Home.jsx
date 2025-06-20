@@ -4,13 +4,13 @@ import { ShineBorder } from "../library/ShineBorder";
 import { cn } from "../lib/utils";
 import { AnimatedShinyText } from "../library/AnimatedShinyText";
 import { ArrowRightIcon } from "lucide-react";
-import { CoolMode } from "../library/CoolMode";
 import { TextShimmer } from "../library/TextShimmer";
+import MyDisplay from "../components/BentoGrid";
 
 export const Home = () => {
   return (
-    <div>
-      <div className="h-screen overflow-hidden relative">
+    <div className="min-h-screen flex flex-col gap-4">
+      <div className="h-screen flex flex-col gap-4 overflow-hidden relative">
         <div className="absolute select-none inset-0 z-20 flex flex-col gap-10 items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-2">
             <div
@@ -18,12 +18,12 @@ export const Home = () => {
                 "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-100 dark:border-white/15 dark:bg-transparent dark:hover:bg-neutral-800"
               )}
             >
-              <CoolMode>
-                <AnimatedShinyText className="inline-flex select-none items-center justify-center px-4 py-1 transition ease-out text-sm hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-                  <span>✨ I help brands turn bold ideas !</span>
-                  <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                </AnimatedShinyText>
-              </CoolMode>
+              {/* <CoolMode> */}
+              <AnimatedShinyText className="inline-flex select-none items-center justify-center px-4 py-1 transition ease-out text-sm hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                <span>✨ I help brands turn bold ideas !</span>
+                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              </AnimatedShinyText>
+              {/* </CoolMode> */}
             </div>
             <TextShimmer className="font-mono text-[15px]" duration={2}>
               into beautiful & functional digital products.
@@ -65,6 +65,9 @@ export const Home = () => {
           />
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center h-28 bg-gradient-to-b from-transparent to-black"></div>
+      </div>
+      <div className="flex p-14 justify-center items-center">
+        <MyDisplay />
       </div>
     </div>
   );

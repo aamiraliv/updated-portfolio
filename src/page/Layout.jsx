@@ -8,11 +8,12 @@ import { TbBrandLeetcode } from "react-icons/tb";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Outlet } from "react-router-dom";
 import SplashCursor from "../library/SplashCursor";
+import logo from "../assets/logo.png"
 
 export const Layout = () => {
   return (
     <div className="bg-[#060010] min-h-screen select-none relative">
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       <div className="absolute inset-0 z-10 h-full w-full">
         <Aurora
           colorStops={["#0f0c29", "#302b63", "#24243e"]}
@@ -22,6 +23,9 @@ export const Layout = () => {
         />
       </div>
 
+      <div className="logo fixed top-0 left-0 z-50 ">
+        <img src={logo} alt="logo" className="h-20"/>
+      </div>
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
         <SlideTabs />
       </div>
