@@ -23,7 +23,7 @@ export const Layout = () => {
         />
       </div>
 
-      <div className="logo fixed top-0 left-0 z-50 ">
+      <div className="logo hidden md:block fixed top-0 left-0 z-50 ">
         <img src={logo} alt="logo" className="h-20"/>
       </div>
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
