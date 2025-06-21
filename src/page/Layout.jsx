@@ -13,7 +13,7 @@ import logo from "../assets/logo.png"
 export const Layout = () => {
   return (
     <div className="bg-[#060010] min-h-screen select-none relative">
-      {/* <SplashCursor /> */}
+      <SplashCursor />
       <div className="absolute inset-0 z-10 h-full w-full">
         <Aurora
           colorStops={["#0f0c29", "#302b63", "#24243e"]}

@@ -2,6 +2,8 @@ import { LuArrowRight, LuMapPin } from "react-icons/lu";
 import { IconCloudDemo } from "./IconCloudDemo";
 import { Globe } from "../library/Globe";
 import { UserLogo } from "./UserLogo";
+import { DotPattern } from "../library/DotBackground";
+import { cn } from "../lib/utils";
 
 const MyDisplay = () => {
   return (
@@ -49,8 +51,20 @@ const MyDisplay = () => {
         </div>
       </div>
 
-      <div className="col-span-6 md:col-span-3 lg:col-span-2 md:row-span-2 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative">
+      <div className=" col-span-6 md:col-span-3 lg:col-span-2 md:row-span-2 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <DotPattern
+            className={cn(
+              "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+            )}
+          />
+        </div>
         <div className="h-full w-full absolute top-0 left-0">
+          <h1 className="mt-4 w-full bg-gradient-to-b from-[#edeffd] to-[#901f00] bg-clip-text text-center text-2xl leading-[100%] font-bold tracking-tighter text-balance text-transparent select-none md:mt-12 absolute z-[100]">
+            Tools that help me turn
+            <br /> visions into reality
+          </h1>
+
           <IconCloudDemo />
         </div>
       </div>

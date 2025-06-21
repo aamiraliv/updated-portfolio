@@ -10,6 +10,9 @@ const slugs = [
   "springboot",
   "html5",
   "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
   "prisma",
   "amazonaws",
   "vercel",
@@ -32,7 +35,7 @@ export function IconCloudDemo() {
   );
 
   return (
-    <div className="relative flex size-full items-center justify-center overflow-hidden">
+    <div className="relative flex size-full items-center justify-center overflow-hidden z-10">
       <IconCloud images={images} />
     </div>
   );
