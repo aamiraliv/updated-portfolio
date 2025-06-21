@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <div className="min-h-screen flex flex-col gap-2 sm:gap-4">
       <div className="h-screen flex flex-col gap-2 sm:gap-4 overflow-hidden relative">
-        <div className="absolute select-none inset-0 z-20 flex flex-col gap-4 sm:gap-6 md:gap-10 items-center justify-center px-4 sm:px-8">
+        <div className="absolute select-none inset-0 z-20 flex flex-col  gap-18 sm:gap-6 md:gap-14 items-center justify-center px-4 sm:px-8">
           <div className="flex flex-col items-center justify-center gap-1 sm:gap-2">
             <div
               className={cn(
@@ -29,7 +29,7 @@ export const Home = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-1 sm:gap-2">
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-400/50 font-poiret tracking-wide text-center">
-              Hi, I'm <span className="text-neutral-400">Amir Ali V</span>
+              Hi, I'm <span className="text-neutral-400 ">Amir Ali V</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg font-mono text-neutral-400/50 tracking-wide text-center">
               Full Stack Developer | UI/UX Enthusiast

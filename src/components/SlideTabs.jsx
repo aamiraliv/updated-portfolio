@@ -19,9 +19,10 @@ export const SlideTabs = () => {
       }}
       className="relative mx-auto flex w-fit rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg p-0.5"
     >
-      <Tab setPosition={setPosition}>home</Tab>
-      <Tab setPosition={setPosition}>about</Tab>
-      <Tab setPosition={setPosition}>projects</Tab>
+      <Tab setPosition={setPosition}>Home</Tab>
+      <Tab setPosition={setPosition}>About</Tab>
+      <Tab setPosition={setPosition}>Works</Tab>
+      <Tab setPosition={setPosition}>More</Tab>
       <Tab setPosition={setPosition}>contact</Tab>
 
       <Cursor position={position} />
