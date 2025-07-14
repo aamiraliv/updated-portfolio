@@ -6,6 +6,7 @@ import { AnimatedShinyText } from "../library/AnimatedShinyText";
 import { ArrowRight } from "lucide-react";
 import { TextShimmer } from "../library/TextShimmer";
 import MyDisplay from "../components/BentoGrid";
+import { ITSkillsMarquee } from "../components/SkillsMarque";
 
 export const Home = () => {
   return (
@@ -23,7 +24,10 @@ export const Home = () => {
                 <ArrowRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </AnimatedShinyText>
             </div>
-            <TextShimmer className="font-mono text-xs sm:text-[15px] text-center" duration={2}>
+            <TextShimmer
+              className="font-mono text-xs sm:text-[15px] text-center"
+              duration={2}
+            >
               into beautiful & functional digital products.
             </TextShimmer>
           </div>
@@ -36,7 +40,10 @@ export const Home = () => {
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-1 sm:gap-2">
-            <TextShimmer className="font-mono text-xs sm:text-[15px] text-center" duration={2}>
+            <TextShimmer
+              className="font-mono text-xs sm:text-[15px] text-center"
+              duration={2}
+            >
               crafting seamless web experiences.
             </TextShimmer>
             <p className="text-xs sm:text-sm font-poiret text-neutral-400/50 tracking-wide text-center max-w-md sm:max-w-none">
@@ -76,6 +83,9 @@ export const Home = () => {
       </div>
       <div className="flex p-4 sm:p-8 md:p-14 justify-center items-center">
         <MyDisplay />
+      </div>
+      <div className="flex p-4 sm:p-8 md:p-14 ">
+        <ITSkillsMarquee />
       </div>
     </div>
   );

@@ -4,11 +4,32 @@ import { Globe } from "../library/Globe";
 import { UserLogo } from "./UserLogo";
 import { DotPattern } from "../library/DotBackground";
 import { cn } from "../lib/utils";
+import Technology from "./Technology";
+import { ArrowRight, Code } from "lucide-react";
 
 const MyDisplay = () => {
   return (
     <div className="mx-auto grid w-full auto-rows-[21rem] grid-cols-6 gap-4 md:max-w-full md:auto-rows-[19rem] my-20">
-      <div className="col-span-6 md:col-span-3 lg:col-span-4 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset]"></div>
+      <div className="col-span-6 md:col-span-3 lg:col-span-4 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-[100]">
+          <Technology />
+        </div>
+        <div className="pointer-events-none z-30 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10 absolute bottom-0 w-full z-[101]">
+          <Code
+            size={40}
+            className="text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75 mb-1"
+          />
+          <h1 className="max-w-lg text-neutral-400 font-outfit">Tech Stack</h1>
+        </div>
+        <div className="absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 z-[101] font-outfit">
+          <h4 className="text-neutral-300 flex items-center gap-2 font-bold cursor-pointer">
+            Explore Stack{" "}
+            <span className="pt-[2px]">
+              <ArrowRight />
+            </span>
+          </h4>
+        </div>
+      </div>
 
       {/* globe */}
       <div className="group col-span-6 md:col-span-3 lg:col-span-2 md:row-span-2 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative overflow-hidden">
@@ -72,7 +93,20 @@ const MyDisplay = () => {
       <div className="col-span-6 md:col-span-3 lg:col-span-2 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset]">
         <UserLogo />
       </div>
-      <div className="col-span-6 md:col-span-6 lg:col-span-4 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset]"></div>
+      <div className="hide-scrollbar col-span-6 md:col-span-6 lg:col-span-4 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative overflow-x-scroll z-[100]">
+        <div class="absolute inset-0 ">
+          <iframe
+            data-testid="embed-iframe"
+            src="https://open.spotify.com/embed/playlist/2Y3C19yYZUze4MI2OIA2kK?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };
