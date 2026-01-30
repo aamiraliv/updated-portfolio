@@ -93,11 +93,11 @@ const MyDisplay = () => {
       <div className="col-span-6 md:col-span-3 lg:col-span-2 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset]">
         <UserLogo />
       </div>
-      <div className="hide-scrollbar col-span-6 md:col-span-6 lg:col-span-4 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative overflow-x-scroll z-[100]">
+      <div className="hide-scrollbar col-span-6 md:col-span-6 lg:col-span-4 w-full rounded-lg [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff2f_inset] relative overflow-x-scroll z-[99]">
         <div class="absolute inset-0 ">
           <iframe
             data-testid="embed-iframe"
-            src="https://open.spotify.com/embed/playlist/2Y3C19yYZUze4MI2OIA2kK?utm_source=generator&theme=0"
+            src="https://open.spotify.com/embed/playlist/5UPKIYN3QMs7CP0xfVoDPQ?utm_source=generator&theme=0"
             width="100%"
             height="352"
             frameBorder="0"
